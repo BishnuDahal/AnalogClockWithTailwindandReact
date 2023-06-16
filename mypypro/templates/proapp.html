@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Proo App Html</h1>
+<h3>{{ request.user }}</h3>
+<h3>{{my_text }}</h3>
+
+<ul>
+    {% for abc in my_list %}
+        {% if abc == 312 %}
+            <li>{{ forloop.counter }} - {{ abc|add:22 }}</li>
+        {% elif abc == "Abc" %}
+            <li>This is not the network</li>
+        {% else %}
+            <li>{{ forloop.counter }} - {{ abc }}</li>
+        {% endif %}
+        
+        
+    {% endfor %}
+    </ul>
+    
+
+
+{% endblock content %}
